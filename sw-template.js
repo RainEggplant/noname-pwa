@@ -1,7 +1,7 @@
 const workboxVersion = "6.4.2";
 
 importScripts(
-  `https://storage.googleapis.com.cnpmjs.org/workbox-cdn/releases/${workboxVersion}/workbox-sw.js`
+  `https://cdn.jsdelivr.net/npm/workbox-sw@${workboxVersion}/build/workbox-sw.min.js`
 );
 
 workbox.core.setCacheNameDetails({
@@ -56,6 +56,23 @@ workbox.routing.registerRoute(
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 100,
         maxAgeSeconds: 60 * 60 * 24 * 180,
+      }),
+      new workbox.cacheableResponse.CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
+
+// Static Libraries
+workbox.routing.registerRoute(
+  /^https:\/\/cdn\.jsdelivr\.net/,
+  new workbox.strategies.CacheFirst({
+    cacheName: "static-libs",
+    plugins: [
+      new workbox.expiration.ExpirationPlugin({
+        maxEntries: 100,
+        maxAgeSeconds: 60 * 60 * 24 * 15,
       }),
       new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [0, 200],
