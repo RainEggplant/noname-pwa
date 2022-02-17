@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "workbox-build": "^6.4.2"
+  }
+}
