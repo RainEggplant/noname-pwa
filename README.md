@@ -1,7 +1,7 @@
 # noname-PWA
 
 > 无名杀是基于社区的开源、免费的三国杀客户/服务端。
- 
+
 无名杀的 “渐进式网络应用程序 (Progressive Web App)” 版本 —— [点击体验](https://raineggplant.github.io/noname-pwa) ！
 
 ## 简介
@@ -48,7 +48,3 @@ iOS 仅 Safari 浏览器可以安装 PWA，请访问无名杀的站点地址，�
 - > 连接官方提供的联机大厅时提示 “当前的安全策略不允许未经加密的 WebSocket 连接”。
 
   官方联机大厅采用的是未经加密的 WebSocket 连接，通常情况下浏览器会进行阻止。如果您必须连接这个地址，请参考[此页面](allow_mixed_content.md)。
-
-- > 为什么本项目中无名杀 submodule 的路径是 `docs`？
-
-  由于 GitHub Pages 的限制，只能部署根目录或者 `docs` 目录，因此暂时使用 `docs` 目录。

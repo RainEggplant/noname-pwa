@@ -4,8 +4,8 @@ const workbox = require("workbox-build");
 gulp.task("generate-service-worker", () => {
   return workbox.injectManifest({
     swSrc: "./sw-template.js",
-    swDest: "./docs/sw.js",
-    globDirectory: "./docs",
+    swDest: "./noname/sw.js",
+    globDirectory: "./noname",
     globPatterns: ["**/*.{html,css,js,json,woff2}"], // pre-cache
     modifyURLPrefix: {
       "": "./",

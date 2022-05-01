@@ -1,4 +1,4 @@
 [submodule "noname"]
-	path = docs
+	path = noname
 	url = git@github.com:RainEggplant/noname.git
     branch = pwa
