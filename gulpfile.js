@@ -6,7 +6,7 @@ gulp.task("generate-service-worker", () => {
     swSrc: "./sw-template.js",
     swDest: "./noname/sw.js",
     globDirectory: "./noname",
-    globPatterns: ["**/*.{html,css,js,json,woff2}"], // pre-cache
+    globPatterns: ["**/*.{html,css,js,json}"], // pre-cache
     modifyURLPrefix: {
       "": "./",
     },

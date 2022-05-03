@@ -55,7 +55,7 @@ workbox.routing.registerRoute(
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 100,
-        maxAgeSeconds: 60 * 60 * 24 * 180,
+        maxAgeSeconds: 60 * 60 * 24 * 360,
       }),
       new workbox.cacheableResponse.CacheableResponsePlugin({
         statuses: [0, 200],
